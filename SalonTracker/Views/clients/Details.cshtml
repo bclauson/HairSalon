@@ -1,0 +1,10 @@
+
+@model SalonTracker.Models.clients
+
+<h2>Client Details</h2>
+<hr />
+<h3> @Model.clientName </h3>
+
+<h2>@Html.ActionLink("Back to Stylist", "Details", "stylists", new {id = @Model.stylistId})</h2>
+
+

@@ -36,6 +36,12 @@ namespace SalonTracker.Controllers
       return RedirectToAction("Index", "stylists");
     }
 
+    public ActionResult Details(int id)
+    {
+      clients thisclient = _db.Clients.FirstOrDefault(clients => clients.clientsId == id);
+      return View(thisclient);
+    }
+
 
 
 
