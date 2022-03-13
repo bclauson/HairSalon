@@ -40,8 +40,10 @@ namespace SalonTracker.Controllers
       stylists thisStylist = _db.Stylists.FirstOrDefault(stylists => stylists.stylistsId == id);
       List<clients> stylistClients = _db.Clients.Where(clients => clients.stylistId == id).ToList();
       ViewBag.Clients = stylistClients;
+      
       return View(thisStylist);
     }
+
 
   }
 }

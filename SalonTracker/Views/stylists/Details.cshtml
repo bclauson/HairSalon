@@ -18,10 +18,10 @@
 
 @foreach (clients client in ViewBag.Clients)
 {
-  <p>@client.clientName</p>
+  <p>@Html.ActionLink($"{@client.clientName}", "Details", "clients", new {id = client.clientsId}) </p>
 }
 
 
+<h2>@Html.ActionLink("Add new Client", "Create", "clients") <h2>
 
-
-<p>@Html.ActionLink("Back to Stylists", "Index")</p>
+<h2>@Html.ActionLink("Back to Stylists", "Index")</h2>

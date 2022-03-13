@@ -1,0 +1,9 @@
+@model SalonTracker.Models.clients
+<h3>Add a new Client</h3>
+@using (Html.BeginForm())
+{
+  <label for="clientName">Clients Name: </label>
+  @Html.TextBoxFor(model => model.clientName)
+  @Html.TextBoxFor(model => model.stylistId)
+  <input type="submit" value="Add new Client">
+}
