@@ -20,5 +20,18 @@ namespace SalonTracker.Controllers
       List<stylists> model = _db.Stylists.ToList();
       return View(model);
     }
+
+    public ActionResult Create()
+    {
+      return View();
+    }
+
+    [HttpPost]
+    public ActionResult Create(stylists stylist)
+    {
+      _db.Stylists.Add(stylist);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }

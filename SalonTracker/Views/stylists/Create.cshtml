@@ -1,0 +1,10 @@
+
+
+@model SalonTracker.Models.stylists
+<h3>Add a new Stylist</h3>
+@using (Html.BeginForm())
+{
+  <label for="stylistName">Stylists Name: </label>
+  @Html.TextBoxFor(model => model.stylistName)
+  <input type="submit" value="Add new Sytlist">
+}
