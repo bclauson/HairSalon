@@ -29,6 +29,7 @@
 * Create appsettings.json file within the SalonTracker directory with the code:
  <code> 
  {
+  
   "ConnectionStrings": {
     "DefaultConnection": "Server=localhost;Port=3306;database=Branden_Clauson;uid=[User Id];pwd=[UserPassword];"
   }
