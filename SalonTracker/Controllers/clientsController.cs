@@ -25,12 +25,14 @@ namespace SalonTracker.Controllers
     
     public ActionResult Create()
     {
+      ViewBag.stylistId = new SelectList(_db.Stylists, "stylistsId", "stylistName");
       return View();
     }
 
     [HttpPost]
     public ActionResult Create(clients client)
     {
+
       _db.Clients.Add(client);
       _db.SaveChanges();
       return RedirectToAction("Index", "stylists");
