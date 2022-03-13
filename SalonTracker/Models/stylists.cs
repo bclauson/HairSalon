@@ -9,7 +9,7 @@ namespace SalonTracker.Models
       this.clients = new HashSet<clients>();
     }
     public int stylistsId { get; set; }
-    public string Type { get; set; }
+    public string stylistName { get; set; }
     public virtual ICollection<clients> clients { get; set; }
   }
 }
