@@ -1,0 +1,27 @@
+
+@model SalonTracker.Models.stylists
+
+@using SalonTracker.Models;
+
+
+<h2>Stylist Details</h2>
+<hr />
+<h3>@Model.stylistName</h3>
+
+
+
+@if (@ViewBag.Clients.Count == 0)
+{
+  <p>No Current Clients </p>
+}
+
+
+@foreach (clients client in ViewBag.Clients)
+{
+  <p>@client.clientName</p>
+}
+
+
+
+
+<p>@Html.ActionLink("Back to Stylists", "Index")</p>
